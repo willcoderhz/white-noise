@@ -1,0 +1,106 @@
+/* WhiteNoisePlayer.css */
+.button {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: white; /* Default background color */
+    color: rgb(231, 130, 130);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  
+  .button-touched {
+    background-color: rgba(255, 192, 203, 0.648); /* Color when button is touched */
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: rgb(231, 130, 130);
+    margin-bottom: 1%;
+    margin-top: 2%;
+    font-family: 'Satisfy', cursive;
+   
+  }
+
+  h4{
+    color: rgb(231, 130, 130);
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon{
+    margin-bottom: 15px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0; /* Adjust as needed */
+  }
+
+  .button input[type="range"] {
+    width: 70%; /* Adjust as needed */
+    margin-top: 15px;
+    height: 4px;
+  }
+  
+  .volume-slider {
+    /* Background color (the track) */
+    background-color: rgb(255, 246, 246);
+    border-radius: 20%;
+  
+    /* Webkit (Chrome & newer versions of Safari) */
+    -webkit-appearance: none;
+    
+  
+    /* Thumb */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      
+      width: 10px; /* Adjust as needed */
+      height: 10px; /* Adjust as needed */
+      background: rgb(229, 166, 177); 
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  
+    /* Track */
+    &::-webkit-slider-runnable-track {
+      height: 10.5px; /* Adjust as needed */
+      cursor: pointer;
+    }
+
+  }
+  
+  .footer {
+    margin-top: 20px;    /* Adjust as needed */
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;     /* Adjust font size as needed */
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(231, 130, 130);  /* Keeping the same color as your other text for consistency */
+}
+
+  
