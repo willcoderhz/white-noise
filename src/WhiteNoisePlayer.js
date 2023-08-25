@@ -130,16 +130,17 @@ const WhiteNoisePlayer = () => {
         {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
       </button>
       </div>
-      <audio id="rain" src="/music/rain.wav"></audio>
-      <audio id="birds" src="/music/birds.wav"></audio>
-      <audio id="fire" src="/music/fire.mp3"></audio>
-      <audio id="frogs" src="/music/frogs.mp3"></audio>
-      <audio id="river" src="/music/river.mp3"></audio>
-      <audio id="thunder" src="/music/thunder.wav"></audio>
-      <audio id="rainforest" src="/music/rainforest.mp3"></audio>
-      <audio id="wind" src="/music/wind.wav"></audio>
-      <audio id="tides" src="/music/tides.wav"></audio>
-      <audio id="yoga" src="/music/yoga.mp3"></audio>
+      <audio id="rain" src={`${process.env.PUBLIC_URL}/music/rain.wav`}></audio>
+<audio id="birds" src={`${process.env.PUBLIC_URL}/music/birds.wav`}></audio>
+<audio id="fire" src={`${process.env.PUBLIC_URL}/music/fire.mp3`}></audio>
+<audio id="frogs" src={`${process.env.PUBLIC_URL}/music/frogs.mp3`}></audio>
+<audio id="river" src={`${process.env.PUBLIC_URL}/music/river.mp3`}></audio>
+<audio id="thunder" src={`${process.env.PUBLIC_URL}/music/thunder.wav`}></audio>
+<audio id="rainforest" src={`${process.env.PUBLIC_URL}/music/rainforest.mp3`}></audio>
+<audio id="wind" src={`${process.env.PUBLIC_URL}/music/wind.wav`}></audio>
+<audio id="tides" src={`${process.env.PUBLIC_URL}/music/tides.wav`}></audio>
+<audio id="yoga" src={`${process.env.PUBLIC_URL}/music/yoga.mp3`}></audio>
+
       <footer className="footer">
       © All rights reserved by Will Yao, 2023
         </footer>
