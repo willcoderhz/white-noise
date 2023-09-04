@@ -1,7 +1,6 @@
 # White Noise Background App
 
-![White Noise Background App Screenshot](screenshot-link.png) 
-*<-- Replace with your app's screenshot link if available.*
+![White Noise Background App Screenshot](screenshots/screenshot.png) 
 
 ## Overview
 
