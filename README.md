@@ -1,7 +1,7 @@
 # White Noise Background App
-<center>
+
 ![White Noise Background App Screenshot](screenshots/screenshot.png) 
-</center>
+
 ## Overview
 
 The White Noise Background App is a user-friendly web application designed to provide ambient sounds to enhance focus, relaxation, and sleep. With a range of different white noise sounds like rain, fire, river, thunder, and more, users can customize their background sound environment to meet their mood and needs.
