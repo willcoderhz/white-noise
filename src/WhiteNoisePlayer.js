@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './WhiteNoisePlayer.css';
+import GifDisplay from './GifDisplay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudRain, faCrow, faFire, faFrog, faWater, faCloudBolt, faWind, faUmbrellaBeach, faCircle} from '@fortawesome/free-solid-svg-icons';
+import { faCloudRain, faMusic, faCrow, faFire, faFrog, faWater, faCloudBolt, faWind, faUmbrellaBeach, faCircle, faBook} from '@fortawesome/free-solid-svg-icons';
 import { faPagelines } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -12,6 +13,21 @@ const WhiteNoisePlayer = () => {
     rain: 1, birds: 1, fire: 1, frogs: 1, river: 1,
     thunder: 1, rainforest: 1, wind: 1, tides: 1, yoga: 1
   });
+
+  // State for controlling GIF display
+  const [showGif, setShowGif] = useState(false);
+  const [currentGif, setCurrentGif] = useState('');
+
+  // Function to handle showing the GIF
+  const displayGif = (gifSrc) => {
+    setCurrentGif(`${process.env.PUBLIC_URL}/image/${gifSrc}`);
+    setShowGif(true);
+  };
+
+  // Function to return to the player
+  const returnToPlayer = () => {
+    setShowGif(false);
+  };
 
   const handleVolumeChange = (sound, event) => {
     const audioElement = document.getElementById(sound);
@@ -46,9 +62,11 @@ const WhiteNoisePlayer = () => {
   };
   
   return (
+    
     <div className='container'>
-      <h2>Silent Harmony</h2>
-      <h4>By Will Yao</h4>
+      {showGif && <GifDisplay gifSrc={currentGif} onReturn={returnToPlayer} />}
+      <h2>Zenic Fantasy</h2>
+      <h4>By Erwei Yao</h4>
       <div className='button-row'>
       <button
         onClick={() => togglePlay('rain')}
@@ -113,12 +131,9 @@ const WhiteNoisePlayer = () => {
       </div>
       
       <div className='button-row'>
-      <button
-        onClick={() => togglePlay('yoga')}
-        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
-      >
-        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
-        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
+      <button onClick={() => displayGif('background1.gif')} className="img_button1">
+          <FontAwesomeIcon icon={faMusic} className="icon" />
+            Bonfire
       </button>
       <button
         onClick={() => togglePlay('tides')}
@@ -134,12 +149,9 @@ const WhiteNoisePlayer = () => {
         <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
         {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
       </button>
-      <button
-        onClick={() => togglePlay('yoga')}
-        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
-      >
-        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
-        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
+      <button onClick={() => displayGif('background3.gif')} className="img_button2">
+          <FontAwesomeIcon icon={faBook} className="icon" />
+            Neon
       </button>
       </div>
       <audio id="rain" src={`${process.env.PUBLIC_URL}/music/rain.wav`}></audio>
@@ -154,8 +166,8 @@ const WhiteNoisePlayer = () => {
 <audio id="yoga" src={`${process.env.PUBLIC_URL}/music/yoga.mp3`}></audio>
 
       <footer className="footer">
-      © All rights reserved by Will Yao, 2023
-        </footer>
+      © All rights reserved by Erwei Yao, 2024
+        </footer>;
     </div>
   );
 };
