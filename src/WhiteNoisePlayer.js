@@ -47,7 +47,7 @@ const WhiteNoisePlayer = () => {
   
   return (
     <div className='container'>
-      <h2>White Noise</h2>
+      <h2>Silent Harmony</h2>
       <h4>By Will Yao</h4>
       <div className='button-row'>
       <button
@@ -65,8 +65,6 @@ const WhiteNoisePlayer = () => {
         <FontAwesomeIcon icon={faCrow} className="icon"  />Birds
         {isTouched.birds &&<VolumeSlider soundId="birds" handleVolumeChange={handleVolumeChange} />}
       </button>
-      </div>
-      <div className='button-row'>
       <button
         onClick={() => togglePlay('fire')}
         className={`button ${isTouched.fire ? 'button-touched' : ''}`}
@@ -82,6 +80,7 @@ const WhiteNoisePlayer = () => {
         {isTouched.frogs&&<VolumeSlider soundId="frogs" handleVolumeChange={handleVolumeChange} />}
       </button>
       </div>
+      
       <div className='button-row'>
       <button
         onClick={() => togglePlay('river')}
@@ -97,13 +96,11 @@ const WhiteNoisePlayer = () => {
         <FontAwesomeIcon icon={faCloudBolt} className="icon"  />Thunder
         {isTouched.thunder&&<VolumeSlider soundId="thunder" handleVolumeChange={handleVolumeChange} />}
       </button>
-      </div>
-      <div className='button-row'>
       <button
         onClick={() => togglePlay('rainforest')}
         className={`button ${isTouched.rainforest ? 'button-touched' : ''}`}
       >
-        <FontAwesomeIcon icon={faPagelines} className="icon"  />Rainforest
+        <FontAwesomeIcon icon={faPagelines} className="icon"  />Forest
         {isTouched.rainforest&&<VolumeSlider soundId="rainforest" handleVolumeChange={handleVolumeChange} />}
       </button>
       <button
@@ -114,13 +111,28 @@ const WhiteNoisePlayer = () => {
         {isTouched.wind&&<VolumeSlider soundId="wind" handleVolumeChange={handleVolumeChange} />}
       </button>
       </div>
+      
       <div className='button-row'>
+      <button
+        onClick={() => togglePlay('yoga')}
+        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
+      >
+        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
+        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
+      </button>
       <button
         onClick={() => togglePlay('tides')}
         className={`button ${isTouched.tides ? 'button-touched' : ''}`}
       >
         <FontAwesomeIcon icon={faUmbrellaBeach} className="icon"  />Tides
         {isTouched.tides&&<VolumeSlider soundId="tides" handleVolumeChange={handleVolumeChange} />}
+      </button>
+      <button
+        onClick={() => togglePlay('yoga')}
+        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
+      >
+        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
+        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
       </button>
       <button
         onClick={() => togglePlay('yoga')}

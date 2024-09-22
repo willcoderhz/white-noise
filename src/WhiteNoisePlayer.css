@@ -1,106 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* WhiteNoisePlayer.css */
-.button {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    background-color: white; /* Default background color */
-    color: rgb(231, 130, 130);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
-    
-  }
-  
-  .button-touched {
-    background-color: rgba(255, 192, 203, 0.648); /* Color when button is touched */
-    width: 150px;
-    height: 150px;
-    color: white;
-    font-weight: bold;
-  }
 
-  h2 {
-    color: rgb(231, 130, 130);
-    margin-bottom: 1%;
-    margin-top: 2%;
-    font-family: 'Satisfy', cursive;
+body {
+  background: 
    
-  }
-
-  h4{
-    color: rgb(231, 130, 130);
-    margin-bottom: 1%;
-    margin-top: 1%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-  }
-
-  .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .icon{
-    margin-bottom: 15px;
-  }
-
-  .button-row {
-    display: flex;
-    flex-direction:row ;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0; /* Adjust as needed */
-  }
-
-  .button input[type="range"] {
-    width: 70%; /* Adjust as needed */
-    margin-top: 15px;
-    height: 4px;
-  }
-  
-  .volume-slider {
-    /* Background color (the track) */
-    background-color: rgb(255, 246, 246);
-    border-radius: 20%;
-  
-    /* Webkit (Chrome & newer versions of Safari) */
-    -webkit-appearance: none;
     
-  
-    /* Thumb */
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      
-      width: 10px; /* Adjust as needed */
-      height: 10px; /* Adjust as needed */
-      background: rgb(229, 166, 177); 
-      cursor: pointer;
-      border-radius: 50%;
-    }
-  
-    /* Track */
-    &::-webkit-slider-runnable-track {
-      height: 10.5px; /* Adjust as needed */
-      cursor: pointer;
-    }
-
-  }
-  
-  .footer {
-    margin-top: 20px;    /* Adjust as needed */
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;     /* Adjust font size as needed */
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(231, 130, 130);  /* Keeping the same color as your other text for consistency */
+    linear-gradient(0deg, #ffffff 50%, #e0e0e034 50%) 0 0/12px 12px;/* Horizontal lines */
+   
+  background-color: #ffffff;
 }
+
+.button {
+  width: 200px; /* More compact for pixel style */
+  height: 200px;
+  border-radius: 0; /* Completely sharp edges */
+  background-color: white; /* Default background color */
+  color: rgb(231, 130, 130);
+  border: 4px solid rgb(231, 130, 130); /* Thick, defined border */
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace; /* Pixelated font */
+  font-size: 20px; /* Smaller, pixel-like font */
+  letter-spacing: 1px; /* Small, tight letter spacing */
+  box-shadow: 4px 4px 0 rgb(150, 75, 75); /* Blocky shadow for depth */
+  transition: box-shadow 0.1s, background-color 0.1s;
+}
+
+.button-touched {
+  background-color: rgba(231, 130, 130, 0.8); /* Light pink color */
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-weight: bold;
+  border: 4px solid rgb(231, 130, 130); /* Pinker border when touched */
+  box-shadow: 4px 4px 0 rgb(150, 75, 75); /* Blocky shadow for depth */
+}
+
+h2 {
+  color: rgb(231, 130, 130);
+  margin-bottom: 1%;
+  margin-top: 2%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px; /* Slightly larger for emphasis */
+  letter-spacing: 2px;
+  text-transform: uppercase; /* All caps for retro style */
+}
+
+h4 {
+  color: rgb(231, 130, 130);
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px; /* Slightly smaller, more pixelated */
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin-bottom: 15px;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.button input[type="range"] {
+  width: 60%; /* More compact slider */
+  margin-top: 15px;
+  height: 4px;
+  appearance: none; /* Disable native styles */
+  background-color: rgb(255, 246, 246); /* Lighter track */
+  border: 2px solid rgb(231, 130, 130); /* Pixel-style track border */
+  cursor: pointer;
+}
+
+.button input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: rgb(229, 166, 177); 
+  cursor: pointer;
+  border: 2px solid rgb(231, 130, 130); /* Sharp, blocky thumb */
+  border-radius: 0; /* Square thumb for pixel style */
+}
+
+.button input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px; /* Slightly smaller for retro style */
+  font-family: 'Press Start 2P', monospace;
+  color: rgb(231, 130, 130);
+  letter-spacing: 1px;
+  text-transform: uppercase; /* All caps for pixel feel */
+}
+
 
   
