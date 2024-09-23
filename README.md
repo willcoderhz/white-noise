@@ -38,4 +38,4 @@ The app is currently deployed on [GitHub Pages](https://willcoderhz.github.io/wh
 
 ## License
 
-All rights reserved by Will Yao, 2023.
+All rights reserved by Will Yao, 2024.

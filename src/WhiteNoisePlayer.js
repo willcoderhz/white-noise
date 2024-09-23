@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './WhiteNoisePlayer.css';
 import GifDisplay from './GifDisplay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudRain, faMusic, faCrow, faFire, faFrog, faWater, faCloudBolt, faWind, faUmbrellaBeach, faCircle, faBook} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee,faShip,faCloudRain,faArchway, faMusic, faCrow, faFire, faFrog, faWater, faCloudBolt, faWind, faUmbrellaBeach, faCircle, faBook} from '@fortawesome/free-solid-svg-icons';
 import { faPagelines } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -76,12 +76,20 @@ const WhiteNoisePlayer = () => {
         Rain
         {isTouched.rain && <VolumeSlider soundId="rain" handleVolumeChange={handleVolumeChange} />}
       </button>
+      
       <button
         onClick={() => togglePlay('birds')}
         className={`button ${isTouched.birds ? 'button-touched' : ''}`}
       >
         <FontAwesomeIcon icon={faCrow} className="icon"  />Birds
         {isTouched.birds &&<VolumeSlider soundId="birds" handleVolumeChange={handleVolumeChange} />}
+      </button>
+      <button
+        onClick={() => togglePlay('tides')}
+        className={`button ${isTouched.tides ? 'button-touched' : ''}`}
+      >
+        <FontAwesomeIcon icon={faUmbrellaBeach} className="icon"  />Tides
+        {isTouched.tides&&<VolumeSlider soundId="tides" handleVolumeChange={handleVolumeChange} />}
       </button>
       <button
         onClick={() => togglePlay('fire')}
@@ -122,6 +130,13 @@ const WhiteNoisePlayer = () => {
         {isTouched.rainforest&&<VolumeSlider soundId="rainforest" handleVolumeChange={handleVolumeChange} />}
       </button>
       <button
+        onClick={() => togglePlay('yoga')}
+        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
+      >
+        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
+        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
+      </button>
+      <button
         onClick={() => togglePlay('wind')}
         className={`button ${isTouched.wind ? 'button-touched' : ''}`}
       >
@@ -135,23 +150,26 @@ const WhiteNoisePlayer = () => {
           <FontAwesomeIcon icon={faMusic} className="icon" />
             Bonfire
       </button>
-      <button
-        onClick={() => togglePlay('tides')}
-        className={`button ${isTouched.tides ? 'button-touched' : ''}`}
-      >
-        <FontAwesomeIcon icon={faUmbrellaBeach} className="icon"  />Tides
-        {isTouched.tides&&<VolumeSlider soundId="tides" handleVolumeChange={handleVolumeChange} />}
+      
+      
+      <button onClick={() => displayGif('background2.gif')} className="img_button2">
+          <FontAwesomeIcon icon={faArchway} className="icon" />
+           Castle
       </button>
-      <button
-        onClick={() => togglePlay('yoga')}
-        className={`button ${isTouched.yoga ? 'button-touched' : ''}`}
-      >
-        <FontAwesomeIcon icon={faCircle} className="icon"  />Yoga
-        {isTouched.yoga&&<VolumeSlider soundId="yoga" handleVolumeChange={handleVolumeChange} />}
-      </button>
-      <button onClick={() => displayGif('background3.gif')} className="img_button2">
+      
+      <button onClick={() => displayGif('background3.gif')} className="img_button3">
           <FontAwesomeIcon icon={faBook} className="icon" />
-            Neon
+          Neon
+      </button>
+
+      <button onClick={() => displayGif('background4.gif')} className="img_button4">
+          <FontAwesomeIcon icon={faShip} className="icon" />
+          Sea
+      </button>
+
+      <button onClick={() => displayGif('background5.gif')} className="img_button5">
+          <FontAwesomeIcon icon={faCoffee} className="icon" />
+          Chill
       </button>
       </div>
       <audio id="rain" src={`${process.env.PUBLIC_URL}/music/rain.wav`}></audio>

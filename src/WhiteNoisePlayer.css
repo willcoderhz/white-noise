@@ -83,7 +83,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 0;
-  background-image: url('../public/image/background3.gif'); 
+  background-image: url('../public/image/background2.gif'); 
   background-size: cover; /* Ensures the image covers the entire button */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
@@ -127,7 +127,149 @@ body {
   background-color: rgba(0, 0, 0, 0.1); /* Lighten the overlay on hover */
 }
 
+.img_button3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  background-image: url('../public/image/background3.gif'); 
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  color: rgb(255, 255, 255); /* Slightly darker text color */
+  border: 4px solid rgb(211, 100, 100); /* Slightly darker border color */
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 rgb(130, 65, 65); /* Slightly darker shadow */
+  position: relative; /* Needed for the overlay */
+  transition: box-shadow 0.1s, background-color 0.1s, transform 0.1s;
+}
 
+/* Add a semi-transparent overlay for a more elegant look */
+.img_button3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 0; /* Make sure the overlay is behind the content */
+  border-radius: 0;
+  transition: background-color 0.1s;
+}
+
+.img_button3:hover {
+  background-color: rgb(255, 220, 220); /* Slightly lighter on hover */
+  box-shadow: 6px 6px 0 rgb(150, 85, 85); /* Slightly stronger shadow on hover */
+  transform: translate(-2px, -2px); /* Slight move for depth */
+}
+
+.img_button3:hover::after {
+  background-color: rgba(0, 0, 0, 0.1); /* Lighten the overlay on hover */
+}
+
+.img_button4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  background-image: url('../public/image/background4.gif'); 
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  color: rgb(255, 255, 255); /* Slightly darker text color */
+  border: 4px solid rgb(211, 100, 100); /* Slightly darker border color */
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 rgb(130, 65, 65); /* Slightly darker shadow */
+  position: relative; /* Needed for the overlay */
+  transition: box-shadow 0.1s, background-color 0.1s, transform 0.1s;
+}
+
+/* Add a semi-transparent overlay for a more elegant look */
+.img_button4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 0; /* Make sure the overlay is behind the content */
+  border-radius: 0;
+  transition: background-color 0.1s;
+}
+
+.img_button4:hover {
+  background-color: rgb(255, 220, 220); /* Slightly lighter on hover */
+  box-shadow: 6px 6px 0 rgb(150, 85, 85); /* Slightly stronger shadow on hover */
+  transform: translate(-2px, -2px); /* Slight move for depth */
+}
+
+.img_button4:hover::after {
+  background-color: rgba(0, 0, 0, 0.1); /* Lighten the overlay on hover */
+}
+
+.img_button5 {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  background-image: url('../public/image/background5.gif'); 
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  color: rgb(255, 255, 255); /* Slightly darker text color */
+  border: 4px solid rgb(211, 100, 100); /* Slightly darker border color */
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 rgb(130, 65, 65); /* Slightly darker shadow */
+  position: relative; /* Needed for the overlay */
+  transition: box-shadow 0.1s, background-color 0.1s, transform 0.1s;
+}
+
+/* Add a semi-transparent overlay for a more elegant look */
+.img_button5::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 0; /* Make sure the overlay is behind the content */
+  border-radius: 0;
+  transition: background-color 0.1s;
+}
+
+.img_button5:hover {
+  background-color: rgb(255, 220, 220); /* Slightly lighter on hover */
+  box-shadow: 6px 6px 0 rgb(150, 85, 85); /* Slightly stronger shadow on hover */
+  transform: translate(-2px, -2px); /* Slight move for depth */
+}
+
+.img_button5:hover::after {
+  background-color: rgba(0, 0, 0, 0.1); /* Lighten the overlay on hover */
+}
 
 .button-touched {
   background-color: rgba(231, 130, 130, 0.8); /* Light pink color */
