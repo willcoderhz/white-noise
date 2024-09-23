@@ -185,7 +185,7 @@ const WhiteNoisePlayer = () => {
 
       <footer className="footer">
       © All rights reserved by Erwei Yao, 2024
-        </footer>;
+        </footer>
     </div>
   );
 };
